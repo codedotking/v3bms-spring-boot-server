@@ -33,7 +33,10 @@
             <scope>test</scope>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
         <!-- database start-->
         <dependency>
@@ -47,8 +50,6 @@
             <version>3.5.5</version>
         </dependency>
         <!-- database end-->
-
-
 
     </dependencies>
 
