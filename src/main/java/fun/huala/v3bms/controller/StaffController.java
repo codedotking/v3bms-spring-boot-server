@@ -23,25 +23,37 @@ public class StaffController {
     }
 
 
+    /**
+     * 获取员工列表
+     */
     @GetMapping("/list")
     public ResponseDTO handleStaffList() {
         List<StaffEntity> staffList = staffService.list();
         return new ResponseDTO().setCode(200).setData(staffList);
     }
 
+
+    /**
+     * 添加员工
+     */
     @PostMapping("")
     public ResponseDTO handleSaveStaff(@RequestBody StaffEntity staffEntity) {
         staffService.save(staffEntity);
         return new ResponseDTO().setCode(200).setMessage("保存成功");
     }
 
+    /**
+     * 更新员工信息
+     */
     @PutMapping("")
     public ResponseDTO handleUpdateStaff(@RequestBody StaffEntity staffEntity) {
         staffService.updateById(staffEntity);
         return new ResponseDTO().setCode(200).setMessage("更新成功成功");
     }
 
-
+    /**
+     * 批量删除员工
+     */
     @DeleteMapping("")
     public ResponseDTO handleUpdateStaff(@RequestBody IdsForm idsForm) {
         staffService.removeByIds(Arrays.asList(idsForm.getIds()));
