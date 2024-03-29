@@ -2,7 +2,7 @@ package fun.huala.v3bms.controller;
 
 import fun.huala.v3bms.model.db.MenuEntity;
 import fun.huala.v3bms.model.dto.ResponseDTO;
-import fun.huala.v3bms.model.vo.IdsForm;
+import fun.huala.v3bms.model.vo.Ids;
 import fun.huala.v3bms.service.IMenuService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +36,7 @@ public class MenuController {
 
     // delete
     @DeleteMapping("")
-    public ResponseDTO handleDeleteMenu(@RequestBody IdsForm ids) {
+    public ResponseDTO handleDeleteMenu(@RequestBody Ids ids) {
         boolean res = menuService.removeByIds(Arrays.asList(ids.getIds()));
         if (!res) {
             return new ResponseDTO().setCode(500).setMessage("删除失败");

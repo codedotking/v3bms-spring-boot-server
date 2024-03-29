@@ -6,8 +6,8 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class IdsForm {
+public class Ids {
 
-    private List<Long>[] ids;
+    private List<Long> ids;
 
 }
