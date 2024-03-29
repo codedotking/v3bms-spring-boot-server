@@ -8,7 +8,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class V3bmsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(V3bmsApplication.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(V3bmsApplication.class, args);
+        System.out.println("启动成功");
+
     }
 
 }

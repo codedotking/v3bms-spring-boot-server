@@ -3,7 +3,7 @@ package fun.huala.v3bms.controller;
 
 import fun.huala.v3bms.model.db.StaffEntity;
 import fun.huala.v3bms.model.dto.ResponseDTO;
-import fun.huala.v3bms.model.vo.IdsForm;
+import fun.huala.v3bms.model.vo.Ids;
 import fun.huala.v3bms.service.IStaffService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -55,7 +55,7 @@ public class StaffController {
      * 批量删除员工
      */
     @DeleteMapping("")
-    public ResponseDTO handleUpdateStaff(@RequestBody IdsForm idsForm) {
+    public ResponseDTO handleUpdateStaff(@RequestBody Ids idsForm) {
         staffService.removeByIds(Arrays.asList(idsForm.getIds()));
         return new ResponseDTO().setCode(200).setMessage("删除成功");
     }
