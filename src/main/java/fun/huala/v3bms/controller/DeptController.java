@@ -24,7 +24,7 @@ public class DeptController {
 
 
     /**
-     * 获取员工列表
+     * 获取部门列表
      */
     @GetMapping("/list")
     public ResponseDTO handleStaffList() {
@@ -34,7 +34,7 @@ public class DeptController {
 
 
     /**
-     * 添加员工
+     * 添加部门
      */
     @PostMapping("")
     public ResponseDTO handleSaveStaff(@RequestBody DeptEntity deptEntity) {
@@ -43,7 +43,7 @@ public class DeptController {
     }
 
     /**
-     * 更新员工信息
+     * 更新部门信息
      */
     @PutMapping("")
     public ResponseDTO handleUpdateStaff(@RequestBody DeptEntity deptEntity) {
@@ -52,7 +52,7 @@ public class DeptController {
     }
 
     /**
-     * 批量删除员工
+     * 批量删除部门
      */
     @DeleteMapping("")
     public ResponseDTO handleUpdateStaff(@RequestBody Ids idsForm) {
