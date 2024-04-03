@@ -12,10 +12,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * @author huala-fun
- * @date 2024/3/26
- */
 @Slf4j
 @RestController
 @RequestMapping("/sys/menu")
