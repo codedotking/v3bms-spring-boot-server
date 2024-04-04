@@ -4,8 +4,8 @@ import fun.huala.v3bms.model.db.MenuEntity;
 import fun.huala.v3bms.model.dto.ResponseDTO;
 import fun.huala.v3bms.model.vo.Ids;
 import fun.huala.v3bms.service.IMenuService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
@@ -15,13 +15,9 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/sys/menu")
+@AllArgsConstructor
 public class MenuController {
     private final IMenuService menuService;
-
-    @Autowired
-    public MenuController(IMenuService menuService) {
-        this.menuService = menuService;
-    }
 
     @GetMapping("/list")
     public ResponseDTO handleMenuTree() {

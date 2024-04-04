@@ -21,7 +21,6 @@ public class DeptEntity {
 
     private Long parentId;
 
-
     private Integer status;
 
     private Integer sort;

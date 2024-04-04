@@ -12,4 +12,6 @@ public class VersionController {
     public ResponseDTO getVersion() {
         return new ResponseDTO().setData("1.0.0").setCode(200);
     }
+
+
 }

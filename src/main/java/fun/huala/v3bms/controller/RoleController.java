@@ -7,23 +7,17 @@ import fun.huala.v3bms.model.dto.ResponseDTO;
 import fun.huala.v3bms.model.vo.Ids;
 import fun.huala.v3bms.model.vo.PageQuery;
 import fun.huala.v3bms.service.IRoleService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Arrays;
 
 @Slf4j
 @RestController
 @RequestMapping("/sys/role")
+@AllArgsConstructor
 public class RoleController {
 
     private final IRoleService roleService;
-
-    @Autowired
-    public RoleController(IRoleService roleService) {
-        this.roleService = roleService;
-    }
 
     /**
      * 获取角色列表

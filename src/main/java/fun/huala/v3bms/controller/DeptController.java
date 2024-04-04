@@ -5,7 +5,7 @@ import fun.huala.v3bms.model.db.DeptEntity;
 import fun.huala.v3bms.model.dto.ResponseDTO;
 import fun.huala.v3bms.model.vo.Ids;
 import fun.huala.v3bms.service.IDeptService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
@@ -13,14 +13,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/sys/dept")
+@AllArgsConstructor
 public class DeptController {
 
     private final IDeptService deptService;
 
-    @Autowired
-    public DeptController(IDeptService deptService) {
-        this.deptService = deptService;
-    }
 
 
     /**
