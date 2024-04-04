@@ -5,23 +5,19 @@ import fun.huala.v3bms.model.db.StaffEntity;
 import fun.huala.v3bms.model.dto.ResponseDTO;
 import fun.huala.v3bms.model.vo.Ids;
 import fun.huala.v3bms.service.IStaffService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/sys/staff")
+@AllArgsConstructor
 public class StaffController {
 
     private final IStaffService staffService;
-
-    @Autowired
-    public StaffController(IStaffService staffService) {
-        this.staffService = staffService;
-    }
-
 
     /**
      * 获取员工列表

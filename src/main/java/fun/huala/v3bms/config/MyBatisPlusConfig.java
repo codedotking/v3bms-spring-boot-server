@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("fun.huala.v3bms.mapper")
 public class MyBatisPlusConfig {
+
+
     /**
      * 添加分页插件
      */
@@ -20,4 +22,6 @@ public class MyBatisPlusConfig {
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return interceptor;
     }
+
+
 }

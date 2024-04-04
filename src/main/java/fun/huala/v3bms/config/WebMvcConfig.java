@@ -14,8 +14,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     /**
      * 跨域配置
-     *
-     * @param registry
      */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
