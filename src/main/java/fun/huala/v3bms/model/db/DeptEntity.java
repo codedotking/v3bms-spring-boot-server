@@ -17,7 +17,7 @@ public class DeptEntity {
 
     private String name;
 
-    private String description;
+    private String remark;
 
     private Long parentId;
 
