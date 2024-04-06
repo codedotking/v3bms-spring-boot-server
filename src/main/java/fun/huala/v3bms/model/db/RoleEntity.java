@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 
 @Data
 @TableName("hl_role")
@@ -26,5 +28,7 @@ public class RoleEntity {
     @TableLogic
     private boolean deleted;
 
-    private String description;
+    private String remark;
+
+    private LocalDateTime createTime;
 }

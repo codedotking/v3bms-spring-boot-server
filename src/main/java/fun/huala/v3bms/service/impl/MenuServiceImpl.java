@@ -8,6 +8,7 @@ import fun.huala.v3bms.model.db.MenuEntity;
 import fun.huala.v3bms.model.db.MenuMetaEntity;
 import fun.huala.v3bms.service.IMenuMetaService;
 import fun.huala.v3bms.service.IMenuService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,14 +19,10 @@ import java.util.List;
 
 @Slf4j
 @Service
+@AllArgsConstructor
 public class MenuServiceImpl extends ServiceImpl<MenuMapper, MenuEntity> implements IMenuService {
 
     private final IMenuMetaService menuMetaService;
-
-    @Autowired
-    public MenuServiceImpl(IMenuMetaService menuMetaService) {
-        this.menuMetaService = menuMetaService;
-    }
 
     @Transactional(rollbackFor = Exception.class)
     @Override
